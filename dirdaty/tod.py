@@ -64,3 +64,10 @@ class tod8(c_ubyte):
         Projects time onto the unit circle
         '''
         return exp(1j*self.value*pi/128)
+
+    @classmethod
+    def from_time(cls, time):
+        '''
+        Encodes a datetime.time object into 8-bit time format
+        '''
+        return tod8(int((60*time.hour + time.minute)*256/1440))
