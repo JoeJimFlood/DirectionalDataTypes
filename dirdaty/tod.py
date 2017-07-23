@@ -3,6 +3,7 @@ Time of day
 '''
 from ctypes import c_ubyte
 from datetime import time
+from numpy import pi, exp
 
 class tod8(c_ubyte):
 
